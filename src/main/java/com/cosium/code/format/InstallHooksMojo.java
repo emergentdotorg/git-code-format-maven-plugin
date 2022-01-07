@@ -116,7 +116,7 @@ public class InstallHooksMojo extends AbstractMavenGitCodeFormatMojo {
             () -> getClass().getResourceAsStream(BASE_PLUGIN_PRE_COMMIT_HOOK),
             StandardCharsets.UTF_8.toString(),
             mavenEnvironment.getMavenExecutable(debug).toAbsolutePath(),
-            pomFile().toAbsolutePath(),
+            gitBaseDir().toAbsolutePath().relativize(pomFile().toAbsolutePath()),
             mavenCliArguments());
     getLog().debug("Written plugin pre commit hook file");
   }
