@@ -3,7 +3,7 @@
 
   <groupId>org.emergent</groupId>
   <artifactId>git-code-format-maven-plugin</artifactId>
-  <version>2.7.3-SNAPSHOT</version>
+  <version>2.7.3</version>
   <packaging>maven-plugin</packaging>
 
   <name>Git Code Format Maven Plugin</name>
@@ -273,7 +273,7 @@
     <connection>scm:git:https://github.com/emergentdotorg/git-code-format-maven-plugin</connection>
     <developerConnection>scm:git:git@github.com:emergentdotorg/git-code-format-maven-plugin.git</developerConnection>
     <url>https://github.com/emergentdotorg/git-code-format-maven-plugin</url>
-    <tag>HEAD</tag>
+    <tag>2.7.3</tag>
   </scm>
 
   <organization>
