@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.cosium.code</groupId>
+  <groupId>org.emergent</groupId>
   <artifactId>git-code-format-maven-plugin</artifactId>
   <version>2.7.1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
@@ -11,7 +11,8 @@
   <description>A maven plugin that automatically deploys https://github.com/google/google-java-format code formatter
     as a pre-commit git hook
   </description>
-  <url>https://github.com/cosium/maven-git-code-format</url>
+
+  <url>https://github.com/emergentdotorg/git-code-format-maven-plugin</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -218,6 +219,13 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <tagNameFormat>@{project.version}</tagNameFormat>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
   <profiles>
@@ -262,27 +270,16 @@
     </profile>
   </profiles>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
-
   <scm>
-    <connection>scm:git:https://github.com/Cosium/maven-git-code-format</connection>
-    <developerConnection>scm:git:https://github.com/Cosium/maven-git-code-format</developerConnection>
-    <url>https://github.com/Cosium/maven-git-code-format</url>
+    <connection>scm:git:https://github.com/emergentdotorg/git-code-format-maven-plugin</connection>
+    <developerConnection>scm:git:git@github.com:emergentdotorg/git-code-format-maven-plugin.git</developerConnection>
+    <url>https://github.com/emergentdotorg/git-code-format-maven-plugin</url>
     <tag>HEAD</tag>
   </scm>
 
   <organization>
-    <name>Cosium</name>
-    <url>http://www.cosium.com</url>
+    <name>Emergent.org</name>
+    <url>http://emergent.org</url>
   </organization>
 
   <developers>
@@ -291,6 +288,10 @@
       <name>Réda Housni Alaoui</name>
       <email>reda.housnialaoui@cosium.com</email>
       <url>https://github.com/reda-alaoui</url>
+    </developer>
+    <developer>
+      <id>pwoodworth</id>
+      <name>Patrick Woodworth</name>
     </developer>
   </developers>
 
